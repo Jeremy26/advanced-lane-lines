@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 [image0]: ./examples/calibration.png "Calibration"
 [image1]: ./examples/undistort_output.png "Undistorted"
 [image2]: ./examples/undistorted.png "Undistorted Test Images"
-[image3]: ./test_images/gradient1.png "Gradient 1"
+[image3]: ./examples/gradient1.png "Gradient 1"
 [image4]: ./examples/gradient2.png "Gradient 2"
 [image5]: ./examples/hls.png "HLS"
 [image6]: ./examples/hls_select.png "HLS Select"
