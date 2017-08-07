@@ -30,6 +30,8 @@ The goals / steps of this project are the following:
 [image11]: ./examples/roc.png "Radius Of Curvature"
 [image12]: ./examples/color_fit_lines.jpg "Color Fit Lines"
 [image13]: ./examples/final.png "Final"
+[image14]: ./examples/roi.png "Region Of Interest"
+
 
 [video1]: ./project_video.mp4 "Video"
 
@@ -100,6 +102,11 @@ Finally, we combine Color thresholding and Gradient thresholding and get the fol
 
 This image will now be used to perspective transform.
 
+##### Before that, I used the region of interest from Project 1 to use only the data that I wanted to use.
+![alt text][image14]
+
+Using region of interest make us use gradient and detect edge more confidently than if we had to choose between the separator of the roads and the lane line.
+
 #### 3. PERSPECTIVE TRANSFORM
 
 My `perspective_transform(img)` function takes in an image that has been treated with color and gradient threshold and returns the image from a birds eye view. I picked source points that could correspond to a region of interest and put them into a rectangle destination.
@@ -158,12 +165,20 @@ Finally, I use the draw lines function that plots the inverse of the matrix calc
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./result.mp4)
+Here's a [link to my video result](./output_videos/result.mp4)
+Here's a [link to my challenge result](./output_videos/result_challenge.mp4)
+Here's a [link to my harder challenge result](./output_videos/result_harder_challenge.mp4)
+Finally:
+Here's a [link to my own video result](./output_videos/result_own_output.mp4)
+
 
 ---
 
 ### Discussion
 
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+As you can see, the lines are not really detected in the harder challenge video. My analyse of this is that I maybe should have used a Line() class in order to remember last detections. That being, if no lines were detected because of shadows or brightness, I would have used the last frames detection.
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+The pipeline doesn't work on my own video. Many reasons can be:
+* The video was recorded on an iPhone 6, 1920x1080. The conversion to 1280x720 could have caused some damages.
+* The lines in Paris are differently separated from the lines in the US; which wouldn't be a big impact.
+* Something else, please feel free to tell me.
