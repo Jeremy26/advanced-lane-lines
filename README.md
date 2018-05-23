@@ -1,4 +1,8 @@
 ## Advanced Lane Finding
+### Video
+
+[![VIDEO](output_images/output_0.jpg)](https://youtu.be/kbBQ9NtkEZ4 "Lane Line Finding")
+
 
 The goals of this project are to detect lines on the road. To do so, we are going through few steps :
 
